@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const Canvas = require('canvas')
 const client = new Discord.Client();
 const prefix = '$';
 
@@ -25,31 +24,16 @@ client.on('ready', () => {
   console.log('')
 });
 
- const db = require('quick.db');
-const giphy = require('giphy-api')();    
-const googl = require('goo.gl');  
-const translate = require('google-translate-api');  
+
 const getYoutubeID = require('get-youtube-id');
-const moment = require("moment");  
 const { Client, Util } = require('discord.js');  
-const UserBlocked = new Set();
-const jimp = require('jimp');  
-const math = require('math-expression-evaluator');
-const stripIndents = require('common-tags').stripIndents;
-const figlet = require('figlet');
-const google = require('google-it');
 const queue = new Map();
-const zalgo = require('zalgolize');  
 const fetchVideoInfo = require('youtube-info');
 const YouTube = require('simple-youtube-api');
 const ytdl = require('ytdl-core');
 const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
-const sql = require("sqlite");
 const fs = require("fs");	
-const dateFormat = require('dateformat');	
- const pretty = require('pretty-ms')
-,ti={}  
-,spee={};
+
  
 
 
@@ -58,8 +42,8 @@ const dateFormat = require('dateformat');
 
 			  
 client.on("message", message => {
-	var prefix = "!";
- if (message.content === "!help ") {
+	var prefix = "$";
+ if (message.content === "$help ") {
 	  message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
   const embed = new Discord.RichEmbed() 
       .setColor("#000000")
